@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TemplateIncorporation</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag 'website', media: 'all' %>
+	</head>
+
+	<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="120">
+       <!-- <div id="preloader">
+            <div id="preloader_spinner">
+				<div class="pre_inner">
+					<div class="dot dot-1"></div>
+					<div class="dot dot-2"></div>
+					<div class="dot dot-3"></div>
+				</div>
+            </div>
+        </div> -->
+        <%= render 'layouts/partials/website_header_nav' %>
+        <%= yield %>
+        <%= render 'layouts/partials/website_footer' %>
+		<%= javascript_include_tag 'website' %>
+	</body>
+</html>
